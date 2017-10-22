@@ -9,7 +9,7 @@ package dynamicProgramming;
 public class RodCutting {
 
     private  int[] priceTable = new int[]{1,5,8,9,10,17,20,24,30};
-    private   int rodLength = 10;
+    private   int rodLength = 9;
     private AlgType algType = AlgType.SIMPLE_RECURIVE;
 
     public RodCutting(){}
@@ -51,6 +51,8 @@ public class RodCutting {
      * @return
      */
     public int getOptimalPrice(){
+        if(priceTable.length!=rodLength)
+            throw new RuntimeException("priceTable.length!=rodLength");
         int optimalPrice = 0;
         switch(this.algType){
             case SIMPLE_RECURIVE:
