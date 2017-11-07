@@ -5,9 +5,8 @@ package dynamicProgramming;/*
  */
 
 public enum AlgType {
-    SIMPLE_RECURIVE(1);
-
-
+    SIMPLE_RECURIVE(1),
+    RECURIVE_WITH_MEM(2);
 
     private int type;
     AlgType(int type){

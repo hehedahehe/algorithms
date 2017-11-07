@@ -12,7 +12,6 @@ public class Tools {
     public static Random random = new Random();
 
 
-
     public  static int[] getPriceTable(int length){
         int[] prices = new int[length];
         for(int i=0;i<length;i++){

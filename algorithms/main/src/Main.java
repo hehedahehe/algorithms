@@ -1,3 +1,4 @@
+import dynamicProgramming.AlgType;
 import dynamicProgramming.MainAlg;
 import dynamicProgramming.RodCutting;
 import dynamicProgramming.Tools;
@@ -16,9 +17,10 @@ public class Main {
         Random random = new Random();
 
         RodCutting rodCutting = new RodCutting();
-        for(int i = 10; i< 40;i++){
+        for(int i = 0; i< 41;i++){
             rodCutting.setRodLength(i);
             rodCutting.setPriceTable(Tools.getPriceTable(i));
+            rodCutting.setAlgType(AlgType.SIMPLE_RECURIVE);
             alg.doAlg(rodCutting);
         }
     }
